@@ -1,0 +1,176 @@
+/* Start global  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+/* End global  */
+/* Start layout  */
+.layout {
+  width: 1440px;
+  background: hsl(233, 47%, 7%);
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 100px;
+  position: relative;
+}
+.layout img {
+  width: calc((100% / 2) - 20px);
+  height: 25vw;
+}
+.layout img + div {
+  width: calc((100% / 2) - 120px);
+  height: 25vw;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  background-color: hsl(277, 64%, 61%, 0.5);
+}
+@media (max-width: 767px) {
+  .layout {
+    flex-direction: column;
+    width: 375px;
+    padding: 60px 20px;
+  }
+  .layout img {
+    width: auto;
+    height: 189px;
+  }
+  .layout img + div {
+    width: calc(90% - 2px);
+    height: 189px;
+    top: 60px;
+    right: 20px;
+  }
+}
+@media (min-width: 180px) and (max-width: 300px) {
+  .layout img {
+    margin-left: 35px;
+  }
+  .layout img + div {
+    width: calc(76% - 2px);
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .layout {
+    padding: 50px;
+  }
+  .layout img {
+    height: 50vw;
+  }
+  .layout img + div {
+    width: calc((100% / 2) - 70px);
+    height: 50vw;
+    top: 50px;
+    right: 50px;
+  }
+}
+/* End layout  */
+/* Start Container */
+.Container {
+  width: calc((100% / 2) - 20px);
+  background-color: hsl(244, 38%, 16%);
+  padding: 55px 60px;
+}
+.Container h1 span {
+  color: hsl(277, 64%, 61%);
+}
+.Container p {
+  color: #ccccccb5;
+  margin: 25px 0 40px -35px;
+  padding: 0 35px;
+  font-size: 13px;
+}
+.Container > span {
+  position: relative;
+  font-size: 25px;
+  margin: 0 25px;
+}
+.Container > span:first-of-type::before {
+  content: "Companies";
+  position: absolute;
+  bottom: -20px;
+  color: #ccccccb5;
+  font-size: 13px;
+}
+.Container > span:first-of-type::after {
+  content: "+";
+  font-size: 16px;
+  position: relative;
+  top: -2px;
+  left: 2px;
+}
+.Container > span:nth-of-type(2)::after {
+  content: "Queries";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: #ccccccb5;
+  font-size: 13px;
+}
+.Container > span:last-of-type::before {
+  content: "Templates";
+  position: absolute;
+  bottom: -20px;
+  color: #ccccccb5;
+  font-size: 13px;
+}
+.Container > span:last-of-type::after {
+  content: "+";
+  font-size: 16px;
+  position: relative;
+  top: -2px;
+  left: 2px;
+}
+@media (min-width: 180px) and (max-width: 300px) {
+  .Container {
+    margin-left: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .Container {
+    width: auto;
+    padding: 60px 40px;
+    text-align: center;
+  }
+  .Container p {
+    margin: 40px 0;
+  }
+  .Container > span {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .Container > span:nth-of-type(2)::after {
+    right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  .Container {
+    padding: 55px 20px;
+  }
+  .Container > span {
+    margin: 0 20px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+  .Container {
+    padding: 18px 70px;
+  }
+  .Container h1 {
+    font-size: 1.5rem;
+  }
+  .Container > span {
+    font-size: 20px;
+    margin: 0px 14px;
+  }
+}
+
+/* End Container */
